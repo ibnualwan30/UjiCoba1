@@ -277,3 +277,4 @@ const Detection = () => {
     </div>
   );
 }
+export default Detection; // Pastikan baris ini ada!

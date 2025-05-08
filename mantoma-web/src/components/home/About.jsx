@@ -7,7 +7,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="/images/farmers.jpg"
+              src="/images/farmer.jpg"
               alt="Petani Tomat"
               className="rounded-xl shadow-lg w-full h-auto"
             />
@@ -36,3 +36,4 @@ const About = () => {
     </section>
   );
 }
+export default About; // Pastikan baris ini ada!
