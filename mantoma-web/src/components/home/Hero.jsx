@@ -24,7 +24,7 @@ const Hero = () => {
           </div>
           <div className="order-1 md:order-2 flex justify-center">
             <img
-              src="/images/hero-image.jpg"
+              src="src/images/gambar1.jpg"
               alt="Tanaman Tomat Sehat"
               className="rounded-xl shadow-lg max-h-[500px] object-cover"
             />

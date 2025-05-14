@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <img src="/images/logo.svg" alt="Mantoma Logo" className="h-10 w-auto mr-3" />
+              
               <span className="text-2xl font-bold text-primary-400">Mantoma</span>
             </div>
             <p className="text-gray-400 mb-6">
@@ -65,7 +65,7 @@ const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  Jepara, Jawa Tengah, Indonesia
+                    Indonesia
                 </span>
               </li>
             </ul>

@@ -37,9 +37,6 @@ const HowItWorks = () => {
         </div>
 
         <div className="relative">
-          {/* Connector Line (Desktop) */}
-          <div className="hidden md:block absolute top-24 left-0 right-0 h-1 bg-primary-200 z-0"></div>
-          
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative z-10">
@@ -55,12 +52,6 @@ const HowItWorks = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="mt-16 text-center">
-          <a href="/detection" className="btn btn-primary">
-            Mulai Deteksi Sekarang
-          </a>
         </div>
       </div>
     </section>

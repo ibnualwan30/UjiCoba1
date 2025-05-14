@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <img src="/images/logo.svg" alt="Mantoma Logo" className="h-10 w-auto mr-3" />
+              
               <span className="text-2xl font-bold text-primary-600">Mantoma</span>
             </Link>
           </div>
@@ -25,7 +25,7 @@ const Navbar = () => {
               Beranda
             </Link>
             <Link to="/about" className="text-gray-700 hover:text-primary-600 font-medium">
-              Tentang
+              About
             </Link>
             <Link to="/detection" className="btn btn-primary">
               Mulai Deteksi
