@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const teamMembers = [
   {
@@ -50,14 +51,9 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div key={index} className="card overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="bg-primary-100 h-40 flex items-center justify-center">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="h-24 w-24 rounded-full object-cover border-4 border-white"
-                  onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/150?text=' + member.name.charAt(0);
-                  }}
-                />
+                <div className="h-24 w-24 rounded-full bg-primary-50 flex items-center justify-center text-primary-700 text-2xl font-bold border-4 border-white overflow-hidden">
+                  {member.name.charAt(0)}
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>

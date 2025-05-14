@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -7,9 +8,12 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="./src/images/farmers.jpg"
+              src="/images/farmers.jpg"
               alt="Petani Tomat"
               className="rounded-xl shadow-lg w-full h-auto"
+              onError={(e) => {
+                e.target.src = "https://via.placeholder.com/600x400?text=Petani+Tomat";
+              }}
             />
           </div>
           <div>
@@ -28,9 +32,9 @@ const About = () => {
               Late Blight, Leaf Mold, dan lainnya, sehingga petani dapat melakukan tindakan preventif yang tepat untuk menyelamatkan hasil panen mereka.
             </p>
             <div className="mt-8">
-              <a href="/about" className="btn btn-primary mr-4">
+              <Link to="/about" className="inline-flex items-center justify-center px-5 py-3 rounded-lg font-medium bg-primary-600 text-white hover:bg-primary-700 transition-colors duration-200">
                 Pelajari Lebih Lanjut
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -38,4 +42,4 @@ const About = () => {
     </section>
   );
 }
-export default About; 
+export default About;

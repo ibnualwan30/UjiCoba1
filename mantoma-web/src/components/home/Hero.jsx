@@ -14,19 +14,22 @@ const Hero = () => {
               Deteksi penyakit daun tomat secara cepat dan akurat menggunakan teknologi Machine Learning. Cukup ambil foto dan dapatkan hasil diagnosis dalam hitungan detik.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/detection" className="btn btn-primary text-center">
+              <Link to="/detection" className="inline-flex items-center justify-center px-5 py-3 rounded-lg font-medium bg-primary-600 text-white hover:bg-primary-700 transition-colors duration-200">
                 Mulai Deteksi
               </Link>
-              <Link to="/about" className="btn btn-secondary text-center">
+              <Link to="/about" className="inline-flex items-center justify-center px-5 py-3 rounded-lg font-medium bg-white text-primary-600 border border-primary-600 hover:bg-gray-50 transition-colors duration-200">
                 Pelajari Lebih Lanjut
               </Link>
             </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center">
             <img
-              src="src/images/gambar1.jpg"
+              src="/images/gambar1.jpg"
               alt="Tanaman Tomat Sehat"
               className="rounded-xl shadow-lg max-h-[500px] object-cover"
+              onError={(e) => {
+                e.target.src = "https://via.placeholder.com/500x400?text=Tanaman+Tomat";
+              }}
             />
           </div>
         </div>

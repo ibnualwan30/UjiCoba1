@@ -1,29 +1,29 @@
 import React from 'react';
 
-const steps = [
-  {
-    number: '01',
-    title: 'Ambil Foto',
-    description: 'Gunakan kamera smartphone Anda untuk mengambil foto daun tomat yang ingin dianalisis, atau pilih dari galeri.'
-  },
-  {
-    number: '02',
-    title: 'Unggah Gambar',
-    description: 'Unggah gambar melalui aplikasi web kami yang mudah digunakan, tidak perlu login atau registrasi.'
-  },
-  {
-    number: '03',
-    title: 'Proses Analisis',
-    description: 'Sistem AI kami menganalisis gambar menggunakan teknologi CNN untuk mengidentifikasi potensi penyakit.'
-  },
-  {
-    number: '04',
-    title: 'Dapatkan Hasil',
-    description: 'Terima hasil deteksi beserta rekomendasi penanganan yang sesuai dengan jenis penyakit yang terdeteksi.'
-  }
-];
-
 const HowItWorks = () => {
+  const steps = [
+    {
+      number: '01',
+      title: 'Ambil Foto',
+      description: 'Gunakan kamera smartphone Anda untuk mengambil foto daun tomat yang ingin dianalisis, atau pilih dari galeri.'
+    },
+    {
+      number: '02',
+      title: 'Unggah Gambar',
+      description: 'Unggah gambar melalui aplikasi web kami yang mudah digunakan, tidak perlu login atau registrasi.'
+    },
+    {
+      number: '03',
+      title: 'Proses Analisis',
+      description: 'Sistem AI kami menganalisis gambar menggunakan teknologi CNN untuk mengidentifikasi potensi penyakit.'
+    },
+    {
+      number: '04',
+      title: 'Dapatkan Hasil',
+      description: 'Terima hasil deteksi beserta rekomendasi penanganan yang sesuai dengan jenis penyakit yang terdeteksi.'
+    }
+  ];
+
   return (
     <section className="section bg-gray-50" id="how-it-works">
       <div className="container-custom">
@@ -41,7 +41,7 @@ const HowItWorks = () => {
             {steps.map((step, index) => (
               <div key={index} className="relative z-10">
                 <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full bg-primary-600 text-white flex items-center justify-center text-xl font-bold mb-6">
+                  <div className="w-16 h-16 rounded-full bg-primary-600 text-white flex items-center justify-center text-xl font-bold mb-6 shadow-md">
                     {step.number}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">

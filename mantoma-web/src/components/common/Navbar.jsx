@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="bg-white shadow-sm py-4">
+    <nav className="bg-white shadow-sm py-4 sticky top-0 z-50">
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              
+              <img 
+                src="/images/logo.svg" 
+                alt="Mantoma Logo" 
+                className="h-10 w-10 mr-2"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E";
+                }}
+              />
               <span className="text-2xl font-bold text-primary-600">Mantoma</span>
             </Link>
           </div>
@@ -25,9 +33,9 @@ const Navbar = () => {
               Beranda
             </Link>
             <Link to="/about" className="text-gray-700 hover:text-primary-600 font-medium">
-              About
+              Tentang
             </Link>
-            <Link to="/detection" className="btn btn-primary">
+            <Link to="/detection" className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg font-medium bg-primary-600 text-white hover:bg-primary-700 transition-colors duration-200">
               Mulai Deteksi
             </Link>
           </div>
@@ -38,6 +46,7 @@ const Navbar = () => {
               type="button"
               className="text-gray-500 hover:text-gray-700 focus:outline-none"
               onClick={toggleMenu}
+              aria-label="Toggle menu"
             >
               <svg
                 className="h-6 w-6"
@@ -83,7 +92,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/detection"
-              className="block btn btn-primary w-full text-center"
+              className="block text-center bg-primary-600 text-white hover:bg-primary-700 py-2.5 px-4 rounded-lg font-medium transition-colors duration-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Mulai Deteksi

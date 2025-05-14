@@ -20,10 +20,6 @@ const Detection = () => {
     }
   };
 
-  const handleCapture = () => {
-    fileInputRef.current.click();
-  };
-
   const handleUpload = () => {
     fileInputRef.current.click();
   };
@@ -123,10 +119,9 @@ const Detection = () => {
                     Pilih dari galeri Anda
                   </p>
                   <div className="flex flex-col sm:flex-row justify-center gap-4">
-                    
                     <button
                       onClick={handleUpload}
-                      className="btn btn-primary"
+                      className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg font-medium bg-primary-600 text-white hover:bg-primary-700 transition-colors duration-200"
                     >
                       <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
@@ -151,7 +146,7 @@ const Detection = () => {
                   <h3 className="text-lg font-medium text-gray-900 mb-4">
                     Pratinjau Gambar
                   </h3>
-                  <div className="relative rounded-lg overflow-hidden max-h-96 flex justify-center">
+                  <div className="relative rounded-lg overflow-hidden max-h-96 flex justify-center border border-gray-200">
                     <img
                       src={preview}
                       alt="Preview"
@@ -163,13 +158,13 @@ const Detection = () => {
                 <div className="flex justify-between">
                   <button
                     onClick={resetDetection}
-                    className="btn btn-secondary"
+                    className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg font-medium bg-white text-primary-600 border border-primary-600 hover:bg-gray-50 transition-colors duration-200"
                   >
                     Pilih Gambar Lain
                   </button>
                   <button
                     onClick={handleDetect}
-                    className="btn btn-primary"
+                    className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg font-medium bg-primary-600 text-white hover:bg-primary-700 transition-colors duration-200"
                     disabled={isLoading}
                   >
                     {isLoading ? (
@@ -197,7 +192,7 @@ const Detection = () => {
               <div className="p-8">
                 <div className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="md:col-span-1">
-                    <div className="rounded-lg overflow-hidden max-h-80">
+                    <div className="rounded-lg overflow-hidden max-h-80 border border-gray-200">
                       <img
                         src={preview}
                         alt="Daun terdeteksi"
@@ -252,12 +247,9 @@ const Detection = () => {
                 <div className="border-t pt-6 flex justify-between">
                   <button
                     onClick={resetDetection}
-                    className="btn btn-secondary"
+                    className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg font-medium bg-white text-primary-600 border border-primary-600 hover:bg-gray-50 transition-colors duration-200"
                   >
                     Deteksi Gambar Lain
-                  </button>
-                  <button className="btn btn-primary">
-                    Simpan Hasil
                   </button>
                 </div>
               </div>
@@ -268,4 +260,5 @@ const Detection = () => {
     </div>
   );
 }
-export default Detection; // Pastikan baris ini ada!
+
+export default Detection;
