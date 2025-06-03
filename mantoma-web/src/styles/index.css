@@ -1,4 +1,3 @@
-/* Memperbaiki style dasar untuk seluruh aplikasi */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -6,21 +5,9 @@
 @tailwind utilities;
 
 @layer base {
-  html, body {
-    @apply font-sans text-gray-800 bg-gray-50 m-0 p-0 min-h-screen w-full;
+  body {
+    @apply font-sans text-gray-800 bg-gray-50;
   }
-  
-  #root {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-bold;
   }
@@ -28,30 +15,87 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center px-5 py-3 rounded-lg font-medium transition-colors duration-200 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:outline-none;
+    @apply inline-flex items-center justify-center px-5 py-3 rounded-lg font-medium transition-colors duration-200;
   }
-  
   .btn-primary {
     @apply bg-primary-600 text-white hover:bg-primary-700;
   }
-  
   .btn-secondary {
     @apply bg-white text-primary-600 border border-primary-600 hover:bg-gray-50;
   }
-  
   .section {
     @apply py-16 md:py-24;
   }
-  
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
   .card {
     @apply bg-white rounded-xl shadow-md overflow-hidden;
   }
-  
   .input {
     @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+}
+
+@layer utilities {
+  /* Custom animations for detection results */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .animate-pulse-once {
+    animation: pulseOnce 0.6s ease-in-out;
+  }
+  
+  .animate-bounce-once {
+    animation: bounceOnce 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulseOnce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+  }
+  
+  @keyframes bounceOnce {
+    0%, 20%, 53%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40%, 43% {
+      transform: translateY(-8px);
+    }
+    70% {
+      transform: translateY(-4px);
+    }
+    90% {
+      transform: translateY(-2px);
+    }
   }
 }

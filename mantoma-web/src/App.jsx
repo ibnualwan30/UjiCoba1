@@ -6,12 +6,11 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Detection from './pages/Detection';
 import NotFound from './pages/NotFound';
-import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-gray-50">
+      <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
           <Routes>

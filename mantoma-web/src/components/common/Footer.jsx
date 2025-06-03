@@ -8,15 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <img 
-                src="/images/logo-white.svg" 
-                alt="Mantoma Logo" 
-                className="h-8 w-8 mr-2"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E";
-                }}
-              />
+              
               <span className="text-2xl font-bold text-primary-400">Mantoma</span>
             </div>
             <p className="text-gray-400 mb-6">
